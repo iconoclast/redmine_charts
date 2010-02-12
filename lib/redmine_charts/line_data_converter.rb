@@ -11,7 +11,7 @@ module RedmineCharts
       index = 0
 
       data[:sets].each do |set|
-        line = OpenFlashChart::LineDot.new
+        line = OpenFlashChart::Line.new
         line.text = set[0]
         line.width = 2
         line.colour = RedmineCharts::Utils.color(index)
