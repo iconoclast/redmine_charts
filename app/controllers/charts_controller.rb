@@ -237,6 +237,7 @@ class ChartsController < ApplicationController
   # Finds current project or raises 404
   def find_project
     @project = Project.find(params[:project_id])
+    @project_id = params[:project_id]
   rescue ActiveRecord::RecordNotFound
     render_404
   end
